@@ -1,44 +1,28 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
+    background-color: #fef6e4; /* Soft pastel white */
+    color: #333;
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     text-align: center;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
 }
 
-.welcome-message h1 {
-    font-size: 2.5em;
-    color: #ff6347; /* Tomato color */
+.box {
+    width: 60%;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #ffc107; /* Marigold border */
+    background-color: #fff3cd; /* Yellow accent */
+    border-radius: 10px;
+    text-align: center;
 }
 
-.welcome-message p {
-    font-size: 1.2em;
-    color: #555;
-    margin: 10px 0;
-}
-
-.banner-image {
-    margin: 20px 0;
-    border-radius: 8px;
-    max-width: 100%;
-}
-
-.welcome-message h2 {
-    font-size: 1.5em;
-    color: #4682b4; /* Steel Blue */
+h1 {
+    color: #ffcc00; /* Marigold */
+    font-size: 2em;
 }
