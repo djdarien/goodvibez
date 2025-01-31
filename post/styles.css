@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Good Vibes Life</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Blog Post Title</h1>
+        <p>By Dr. NeuroTat - <time datetime="YYYY-MM-DD">DATE</time></p>
+    </header>
+
+    <main>
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </article>
+
+        <!-- Auto-loading Image Gallery -->
+        <section class="image-gallery">
+            <!-- Images from /images/ folder will be displayed dynamically -->
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Good Vibes Life</p>
+    </footer>
+
+</body>
+</html>
+body {
+    background-color: #fef6e4; /* Soft pastel white */
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image-gallery::before {
+    content: "";
+    display: block;
+    width: 100%;
+}
+
+.image-gallery img {
+    width: calc(25% - 10px); /* Auto 4 images per row */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
