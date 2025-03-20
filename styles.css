@@ -1,28 +1,98 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap');
+
+/* Global Reset and Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Styles */
 body {
-    background-color: #fef6e4; /* Soft pastel white */
-    color: #333;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-.container {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://wallpapercave.com/wp/wp3558429.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 20px auto;
+    height: 100vh;
+    color: #333;
 }
 
-.box {
-    width: 60%;
-    padding: 20px;
-    margin: 10px;
-    border: 2px solid #ffc107; /* Marigold border */
-    background-color: #fff3cd; /* Yellow accent */
-    border-radius: 10px;
+/* Overlay for better readability */
+.overlay {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Welcome Bubble Styles */
+.welcome-bubble {
+    background: rgba(255, 255, 255, 0.9); /* Translucent white */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
+    max-width: 600px;
+    margin: 0 20px;
+    animation: fadeIn 1.5s ease-out;
 }
 
+/* Typography */
 h1 {
-    color: #ffcc00; /* Marigold */
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ff6347; /* Tomato color */
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #4682b4; /* Steel Blue */
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .welcome-bubble {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
