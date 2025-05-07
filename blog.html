@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog - Good Vibez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --mocha: #3B2F2F;
+      --orange: #FF9F45;
+      --pink: #FFC0CB;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, var(--orange), var(--pink));
+      color: var(--mocha);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--mocha);
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    .content-section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 4rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #3B2F2F;
+    }
+
+    footer {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--mocha);
+    }
+
+    footer a {
+      color: var(--mocha);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Good Vibez</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/shop.html">Store</a></li>
+      <li><a href="/about.html">About Us</a></li>
+      <li><a href="/contact.html">Contact Us</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <div class="content-section">
+    <h1>Our Blog</h1>
+    <p>✨ Blog coming soon... ✨<br/>Stay tuned for good vibez, inspiring stories, and updates from Darien & Victoria.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Good Vibez. All rights reserved. | <a href="/privacy.html">Privacy Policy & Terms of Service</a></p>
+  </footer>
+
+</body>
+</html>

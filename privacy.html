@@ -1,196 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Vibez - Living Life with Positivity</title>
-    <style>
-        :root {
-            --mocha: #3B2F2F;
-            --orange: #FF9F45;
-            --pink: #FFC0CB;
-            --line-color: rgba(0, 0, 0, 0.1);
-            --caribbean-blue: #4EC0CA;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - Good Vibez</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --mocha: #3B2F2F;
+      --orange: #FF9F45;
+      --pink: #FFC0CB;
+      --line-color: rgba(0, 0, 0, 0.1);
+    }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, var(--caribbean-blue), #2AB787);
-            color: white;
-            font-family: 'Playfair Display', serif;
-        }
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, var(--orange), var(--pink));
+      color: var(--mocha);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-        }
+    nav {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
 
-        nav a {
-            text-decoration: none;
-            color: var(--mocha);
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
+    nav li {
+      margin: 0 1rem;
+    }
 
-        nav a:hover {
-            color: var(--orange);
-        }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: var(--mocha);
+      transition: color 0.3s ease;
+    }
 
-        .hero-section {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 5%;
-        }
+    nav a:hover {
+      color: var(--orange);
+    }
 
-        .hero-section h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--orange), var(--mocha));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    .content-section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 3rem 2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        .hero-section p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: auto;
-            margin-bottom: 2rem;
-        }
+    h2, h3, h4 {
+      color: var(--mocha);
+    }
 
-        .cta-button {
-            background: linear-gradient(135deg, var(--orange), var(--mocha));
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.3s ease;
-        }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
 
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
+    h3 {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+    }
 
-        .store-open {
-            text-align: center;
-            padding: 2rem 5%;
-            font-size: 1.2rem;
-            color: var(--mocha);
-        }
+    h4 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+    }
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            padding: 2rem 5%;
-        }
+    p, ul {
+      font-size: 1rem;
+      color: #3B2F2F;
+    }
 
-        .product-card {
-            background: rgba(48, 2, 255, 0.95);
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+    ul {
+      padding-left: 1.2rem;
+    }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
+    .third-party-info ul li {
+      margin-bottom: 0.8rem;
+    }
 
-        footer {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 2rem 5%;
-            text-align: center;
-            color: var(--mocha);
-        }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .content-section {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 5%;
-        }
-    </style>
+      .content-section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#store">Store</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-    </nav>
-   <!-- Privacy Policy Section -->
-    <section id="privacy" class="content-section">
-        <h2>Privacy Policy</h2>
-        <p>We are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and secure your personal information.</p>
-        
-        <h3>Information We Collect</h3>
-        <p>We may collect personal information such as your name, email address, phone number, and payment details when you make purchases or sign up for our newsletter.</p>
+  <!-- Navigation -->
+  <nav>
+    <a href="/" class="logo">Good Vibez</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/shop.html">Store</a></li>
+      <li><a href="/about.html">About Us</a></li>
+      <li><a href="/contact.html">Contact Us</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+    </ul>
+  </nav>
 
-        <h3>How We Use Your Information</h3>
-        <p>Your information is used to process transactions, communicate with you, and improve our services. We may also use it to send you promotional offers (unless you opt out). </p>
+  <section id="privacy" class="content-section">
+    <h2>Privacy Policy</h2>
+    <p>We are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and secure your personal information.</p>
 
-        <h3>Data Security</h3>
-        <p>We implement industry-standard security measures to protect your data. However, no method of transmission over the internet is 100% secure, so we cannot guarantee absolute security.</p>
+    <h3>Information We Collect</h3>
+    <p>We may collect personal information such as your name, email address, phone number, and payment details when you make purchases or sign up for our newsletter.</p>
 
-        <h3>Third-Party Services</h3>
-        <p>Some services on our website are provided by third-party platforms, including Stripe for payment processing. By using our services, you agree to their privacy policies and terms of service as well.</p>
+    <h3>How We Use Your Information</h3>
+    <p>Your information is used to process transactions, communicate with you, and improve our services. We may also use it to send you promotional offers (unless you opt out).</p>
 
-        <div class="third-party-info">
-            <h4>About Stripe</h4>
-            <ul>
-                <li><strong>Data Encryption:</strong> Stripe encrypts data using AES-256 (for data at rest) and TLS 1.2/1.3 (for data in transit), ensuring your information remains confidential.</li>
-                <li><strong>Compliance with Standards:</strong> Stripe complies with PCI-DSS, which outlines security measures for handling credit card information securely.</li>
-                <li><strong>Regular Audits:</strong> The company conducts regular security audits to maintain compliance and protect customer data effectively.</li>
-            </ul>
-        </div>
+    <h3>Data Security</h3>
+    <p>We implement industry-standard security measures to protect your data. However, no method of transmission over the internet is 100% secure, so we cannot guarantee absolute security.</p>
 
-        <h3>Your Rights</h3>
-        <p>You have the right to access, correct, or delete your personal information. Please contact us at info@goodvibez.com for assistance.</p>
+    <h3>Third-Party Services</h3>
+    <p>Some services on our website are provided by third-party platforms, including Stripe for payment processing. By using our services, you agree to their privacy policies and terms of service as well.</p>
 
-        <h3>Changes to Privacy Policy</h3>
-        <p>We may update our Privacy Policy periodically. Any changes will be posted on this page and will become effective immediately upon posting.</p>
+    <div class="third-party-info">
+      <h4>About Stripe</h4>
+      <ul>
+        <li><strong>Data Encryption:</strong> Stripe encrypts data using AES-256 (for data at rest) and TLS 1.2/1.3 (for data in transit), ensuring your information remains confidential.</li>
+        <li><strong>Compliance with Standards:</strong> Stripe complies with PCI-DSS, which outlines security measures for handling credit card information securely.</li>
+        <li><strong>Regular Audits:</strong> The company conducts regular security audits to maintain compliance and protect customer data effectively.</li>
+      </ul>
+    </div>
 
-        <p>By using our website and services, you agree to the terms outlined in this Privacy Policy. We welcome your feedback and questions at info@goodvibez.com.</p>
-    </section>
+    <h3>Your Rights</h3>
+    <p>You have the right to access, correct, or delete your personal information. Please contact us at <strong>webmaster@goodvibez.life</strong> for assistance.</p>
 
-    <a href="#products" class="cta-button">Explore Products</a>
+    <h3>Changes to Privacy Policy</h3>
+    <p>We may update our Privacy Policy periodically. Any changes will be posted on this page and will become effective immediately upon posting.</p>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Add smooth scrolling for navigation links
-            $('nav a[href^="#"]').on('click', function(event) {
-                event.preventDefault();
-                var target = $(this.getAttribute('href'));
-                if( target.length ) {
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top
-                    }, 'smooth');
-                }
-            });
-        });
-    </script>
+    <p>By using our website and services, you agree to the terms outlined in this Privacy Policy.</p>
+  </section>
+
 </body>
+<footer>
+    <center>
+    <div class="content-section">
+        <p>© 2025 Good Vibez. All rights reserved.</p>
+            </p>    
+            <a href="/privacy.html">Privacy Policy & Terms of Service</a>
+        </center>
+        </footer>
 </html>
