@@ -140,62 +140,56 @@
             <li><a href="privacy.html">Privacy Policy</a></li>
         </ul>
     </nav>
+   <!-- Privacy Policy Section -->
+    <section id="privacy" class="content-section">
+        <h2>Privacy Policy</h2>
+        <p>We are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and secure your personal information.</p>
+        
+        <h3>Information We Collect</h3>
+        <p>We may collect personal information such as your name, email address, phone number, and payment details when you make purchases or sign up for our newsletter.</p>
 
-    <section class="hero-section">
-        <div class="content-section">
-            <h1>Good Vibez</h1>
-            <h2> Living Life with Positivity</h2>
-            <p>Welcome to your one-stop destination for all things positive. We're here to make your life brighter, one product at a time.</p>
-        </div>
-    </section>
+        <h3>How We Use Your Information</h3>
+        <p>Your information is used to process transactions, communicate with you, and improve our services. We may also use it to send you promotional offers (unless you opt out). </p>
 
-    <section class="store-open">
-        <h2>We are Open!</h2>
-        <p>Despite construction, we are open for business. Come explore our store and find the perfect item  to bring more good vibes to your life.</p>
-        <div class="store-hours">
-            <h4>Business Hours:</h4>
+        <h3>Data Security</h3>
+        <p>We implement industry-standard security measures to protect your data. However, no method of transmission over the internet is 100% secure, so we cannot guarantee absolute security.</p>
+
+        <h3>Third-Party Services</h3>
+        <p>Some services on our website are provided by third-party platforms, including Stripe for payment processing. By using our services, you agree to their privacy policies and terms of service as well.</p>
+
+        <div class="third-party-info">
+            <h4>About Stripe</h4>
             <ul>
-                <p>Monday - Friday: 9am - 5pm</p>
-                <p>Saturday: 10am - 4pm    </p>
-                <p>Sunday: Closed           </p>
+                <li><strong>Data Encryption:</strong> Stripe encrypts data using AES-256 (for data at rest) and TLS 1.2/1.3 (for data in transit), ensuring your information remains confidential.</li>
+                <li><strong>Compliance with Standards:</strong> Stripe complies with PCI-DSS, which outlines security measures for handling credit card information securely.</li>
+                <li><strong>Regular Audits:</strong> The company conducts regular security audits to maintain compliance and protect customer data effectively.</li>
             </ul>
         </div>
-    
-    <a href="#products" class="cta-button">Explore Store</a>
-    </section>
-    <section id="products">
-        <div class="content-section">
-            <h2>Featured Catagories</h2>
-            <div class="products-grid">
-                <!-- Add product cards here -->
-                <div class="product-card">
-                    <h3>Vintage Electronics</h3>
-                    <p>Description and details will go here</p>
-                    <a href="#" class="cta-button">View Details</a>
-                </div>
-                <div class="product-card">
-                    <h3>Custom Crochet</h3>
-                    <p>Description and details will go here</p>
-                    <a href="#" class="cta-button">View Details</a>
-                </div>
-                <!-- Add more product cards as needed -->
-            </div>
-        </div>
+
+        <h3>Your Rights</h3>
+        <p>You have the right to access, correct, or delete your personal information. Please contact us at info@goodvibez.com for assistance.</p>
+
+        <h3>Changes to Privacy Policy</h3>
+        <p>We may update our Privacy Policy periodically. Any changes will be posted on this page and will become effective immediately upon posting.</p>
+
+        <p>By using our website and services, you agree to the terms outlined in this Privacy Policy. We welcome your feedback and questions at info@goodvibez.com.</p>
     </section>
 
-    <footer>
-        <div class="content-section">
-            <p>© 2025 Good Vibez. All rights reserved.</p>
-            <p>Contact us: (941) 404-8345 | info@goodvibez.com</p>
-            <p>Follow us on social media for updates and promotions:</p>
-            <!-- Add social media links here -->
-        </div>
-    </footer>
+    <a href="#products" class="cta-button">Explore Products</a>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        // You can add JavaScript functionality here if needed
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add any interactive features here
+        $(document).ready(function() {
+            // Add smooth scrolling for navigation links
+            $('nav a[href^="#"]').on('click', function(event) {
+                event.preventDefault();
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 'smooth');
+                }
+            });
         });
     </script>
 </body>
