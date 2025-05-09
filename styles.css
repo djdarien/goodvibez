@@ -1,219 +1,107 @@
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap');
 
-/* CSS Variables */
 :root {
-    --mocha: #de1919;
+    --mocha: #3B2F2F;
     --orange: #FF9F45;
     --pink: #FFC0CB;
-    --line-color: rgba(0, 0, 0, 0.1);
-    --caribbean-blue: #4EC0CA;
-}
+  }
 
-/* Global Reset and Box Sizing */
-* {
-    box-sizing: border-box;
+  body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(135deg, var(--orange), var(--pink));
+    background: url('images/goodvibez_back.jpeg') no-repeat center center fixed;
+    color: var(--mocha);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  nav {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
     margin: 0;
     padding: 0;
-}
+    flex-wrap: wrap;
+  }
 
-/* Body Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background: url('https://wallpapercave.com/wp/wp3558429.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: rgb(225, 19, 19);
-}
+  nav li {
+    margin: 0 1rem;
+  }
 
-/* Overlay (optional, if using intro bubble) */
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(59, 223, 127, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
+  nav a {
     text-decoration: none;
+    font-weight: bold;
     color: var(--mocha);
-    font-size: 1.1rem;
     transition: color 0.3s ease;
-}
+  }
 
-nav a:hover {
+  nav a:hover {
     color: var(--orange);
-}
+  }
 
-/* Hero Section */
-.hero-section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 5%;
-}
-
-.hero-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--orange), var(--mocha));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: auto;
-    margin-bottom: 2rem;
-}
-
-/* Content Section */
-.content-section {
-    max-width: 800px;
+  .content-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem 2rem;
     margin: 2rem auto;
-    padding: 0 5%;
-}
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
 
-/* Welcome Bubble (optional intro card) */
-.welcome-bubble {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    max-width: 600px;
-    margin: 0 20px;
-    animation: fadeIn 1.5s ease-out;
-}
-
-/* Store Section */
-.store-open {
-    text-align: center;
-    padding: 2rem 5%;
-    font-size: 1.2rem;
-    color: var(--mocha);
-}
-
-.store-hours p {
-    margin: 0.3rem 0;
-}
-
-/* Product Grid */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem 5%;
-}
-
-.product-card {
-    background: rgba(48, 2, 255, 0.95);
-    border-radius: 10px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Footer */
-footer {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem 5%;
+  h1, h2, h3 {
     text-align: center;
     color: var(--mocha);
-}
+  }
 
-/* CTA Button */
-.cta-button {
-    background: linear-gradient(135deg, var(--orange), var(--mocha));
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
 
-.cta-button:hover {
-    transform: scale(1.05);
-}
-
-/* Typography */
-h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #ff6347;
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
-    color: #4682b4;
-    margin-top: 20px;
-}
-
-p {
-    font-size: 1.2em;
-    color: #555;
+  p {
+    font-size: 1.1rem;
+    color: #3B2F2F;
     line-height: 1.8;
-    margin: 15px 0;
-}
+  }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .welcome-bubble {
-        padding: 30px;
+  .quote-image {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--mocha);
+  }
+
+  footer a {
+    color: var(--mocha);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
     }
 
-    h1 {
-        font-size: 2em;
+    .content-section {
+      padding: 2rem 1rem;
     }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+  }
